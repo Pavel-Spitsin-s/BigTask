@@ -82,7 +82,7 @@ while run:
         if event.type == pygame.KEYDOWN and event.key == 273 and float(toponym_coodrinates[1]) < 89.5:
             toponym_coodrinates[1] = str(float(toponym_coodrinates[1]) + 0.025)
             map_request = "http://static-maps.yandex.ru/1.x/?ll=" + ",".join(toponym_coodrinates) + "&spn=" + str(
-                x) + ',' + str(c) + "&l=map"
+                x) + ',' + str(c) + "&l=sat,skl"
             response = requests.get(map_request)
             if not response:
                 print("Ошибка выполнения запроса:")
